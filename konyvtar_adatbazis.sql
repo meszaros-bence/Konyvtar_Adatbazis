@@ -19,10 +19,10 @@ CREATE TABLE konyvek (
 
 -- 5. feladat
 CREATE TABLE olvasok (
-    id INTEGER UNIQUE NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL UNIQUE,
     nev VARCHAR(100) NOT NULL,
-    szuletesi_datum ,
-    varos VARCHAR(50) DEFAULT Budapest, 
-    aktivINTEGER DEFAULT igen,
-    regisztracio_idopontja
+    szuletesi_datum DATE NOT NULL,
+    varos VARCHAR(50) DEFAULT 'Budapest',
+    aktiv ENUM('igen', 'nem') DEFAULT 'igen',
+    regisztracio_idopontja TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
