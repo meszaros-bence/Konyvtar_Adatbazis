@@ -26,3 +26,10 @@ CREATE TABLE olvasok (
     aktiv ENUM('igen', 'nem') DEFAULT 'igen',
     regisztracio_idopontja TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- 6. feladat
+DESCRIBE konyvek;
+
+-- 7. feladat
+SHOW CREATE TABLE olvasok;
+
